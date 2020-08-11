@@ -1,0 +1,81 @@
+public class SBIAmazonProblem {
+
+	// main is a function
+	// but in OOPS terminology, main is method :)
+	// main will be executed and whatever we write in main will be executed
+	public static void main(String[] args) {
+		
+		// MODEL: Data Storage Container
+		
+		// 1. Data Storage Container Creation
+		// int day1SalesHK is variable or storage container name
+		// 223451 is literal or constant
+		int day1SalesHK = 223451;
+		int day2SalesHK = 323452;
+		int day3SalesHK = 423459;
+		
+		// int -> is a storage container which shall take 32 bits of size in memory
+		
+		int day1SalesMD = 1223451;
+		int day2SalesMD = 2323452;
+		int day3SalesMD = 3423459;
+		
+		// 2. Update Container Data
+		day3SalesHK = 516789;
+		
+		// VIEW: UI -> Textual UI i.e. Command/Console Based UI
+		// 3. Read the data from Storage Container
+		System.out.println("Home and Kitchen 3 Day Sale:");
+		System.out.println("~~~~~~~~~");
+		System.out.println("day1SalesHK: "+day1SalesHK);
+		System.out.println("day2SalesHK: "+day2SalesHK);
+		System.out.println("day3SalesHK: "+day3SalesHK);
+		
+		System.out.println();
+		
+		System.out.println("Mobile Device 3 Day Sale:");
+		System.out.println("~~~~~~~~~");
+		System.out.println("day1SalesMD: "+day1SalesMD);
+		System.out.println("day2SalesMD: "+day2SalesMD);
+		System.out.println("day3SalesMD: "+day3SalesMD);
+		
+		// PS: Model cannot be deleted from memory by Us. It will be deleted automatically when program i.e main will finish :)
+		
+		// CONTROLLER: Logical Processing on Data -> Mathematical Computations
+		int totalSalesHK = day1SalesHK + day2SalesHK + day3SalesHK;
+		int totalSalesMD = day1SalesMD + day2SalesMD + day3SalesMD;
+		
+		System.out.println();
+		
+		// Display Sales
+		System.out.println("Home and Kitchen 3 Day TOTAL Sale: "+totalSalesHK);
+		System.out.println("Mobile Device 3 Day TOTAL Sale: "+totalSalesMD);
+		
+		// Compute Discounts
+		double totalDiscountHK = 0.10 * totalSalesHK;
+		double totalDiscountMD = 0.10 * totalSalesMD;
+		
+		// Display Discounts
+		System.out.println("Home and Kitchen 3 Day TOTAL Discounts by SBI : "+totalDiscountHK);
+		System.out.println("Mobile Device 3 Day TOTAL Discounts by SBI : "+totalDiscountMD);
+		
+		System.out.println();
+		
+		System.out.println("Final OutCome: ");
+		
+		if(totalSalesHK > totalSalesMD) {
+			System.out.println("SBI must put Stall in Home and Kitchen Applicance Shops");
+		}else {
+			System.out.println("SBI must put Stall in Mobile Shops");
+		}
+		
+		if(totalDiscountHK > totalDiscountMD) {
+			System.out.println("SBI Gave More Discount for Home and Kitchen Sales by "+(totalDiscountHK - totalDiscountMD));
+		}else {
+			System.out.println("SBI Gave More Discount for Mobile Devices Sales by "+(totalDiscountMD - totalDiscountHK));
+		}
+		
+
+	}
+
+}
